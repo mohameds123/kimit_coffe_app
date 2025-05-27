@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kimitcoffeeapp/details_screen.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -45,33 +46,38 @@ class LoginScreen extends StatelessWidget {
                 SizedBox(
                   height: 24,
                 ),
-                Container(
-                  height: 54,
-                  width: 317,
-                  decoration: BoxDecoration(
-                      color: Colors.white,
-                    borderRadius: BorderRadius.circular(10)
-                  ),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Image.asset(
-                          'assets/images/Google.png',
-                        width: 33,
-                        height: 33,
-
-                      ),
-                      SizedBox(
-                        width: 12,
-                      ),
-                      Text("Continue with Google",
-                      style: TextStyle(
-                        fontSize: 20,
-                        fontWeight: FontWeight.w500,
-                        color: Colors.grey
-                      ),
-                      )
-                    ],
+                InkWell(
+                  onTap: (){
+                    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=> DetailsScreen()));
+                  },
+                  child: Container(
+                    height: 54,
+                    width: 317,
+                    decoration: BoxDecoration(
+                        color: Colors.white,
+                      borderRadius: BorderRadius.circular(10)
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Image.asset(
+                            'assets/images/Google.png',
+                          width: 33,
+                          height: 33,
+                  
+                        ),
+                        SizedBox(
+                          width: 12,
+                        ),
+                        Text("Continue with Google",
+                        style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.w500,
+                          color: Colors.grey
+                        ),
+                        )
+                      ],
+                    ),
                   ),
                 ),
 
